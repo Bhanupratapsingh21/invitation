@@ -154,6 +154,17 @@ export function Footer() {
         <p className="mt-8 font-script text-5xl text-saffron">Neha &amp; Pavan</p>
         <p className="mt-2 text-sm uppercase tracking-[0.35em] text-gold">21 · 11 · 2026</p>
       </Reveal>
+      <p className="absolute bottom-4 z-10 rounded-full bg-ivory/85 px-4 py-1.5 text-xs tracking-[0.2em] text-ink/70">
+        Created by{" "}
+        <a
+          href="https://bpss.in"
+          target="_blank"
+          rel="noopener"
+          className="text-saffron underline decoration-gold/50 underline-offset-4 hover:decoration-saffron"
+        >
+          bpss.in
+        </a>
+      </p>
     </footer>
   );
 }

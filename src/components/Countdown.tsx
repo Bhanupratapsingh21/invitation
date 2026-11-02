@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useSyncExternalStore } from "react";
 import { weddingDate } from "@/data/wedding";
 import { Reveal } from "./Reveal";
@@ -31,8 +32,19 @@ export function Countdown() {
   const parts = now === null ? null : remaining(now);
 
   return (
-    <section className="px-6 py-20">
-      <Reveal className="mx-auto max-w-2xl text-center">
+    <section className="pb-20">
+      {/* Kothariya lake with the Shiva statue on the hill, fading into the page at both edges */}
+      <div className="relative aspect-[3/2] w-full md:aspect-[2/1]">
+        <Image
+          src="/images/kothariya-shiv.webp"
+          alt="Watercolour of Kothariya village and lake with the Vishwas Swaroopam Shiva statue on the hill"
+          fill
+          sizes="100vw"
+          className="object-cover object-[50%_80%]"
+        />
+        <div className="absolute inset-0 bg-[linear-gradient(var(--ivory),transparent_25%,transparent_88%,var(--ivory))]" />
+      </div>
+      <Reveal className="mx-auto -mt-4 max-w-2xl px-6 text-center">
         <p className="text-xs uppercase tracking-[0.35em] text-gold">Counting down to</p>
         <p lang="hi" className="mt-2 font-hindi text-2xl text-saffron">
           पाणिग्रहण संस्कार

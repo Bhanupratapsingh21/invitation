@@ -1,4 +1,4 @@
-import { getImageProps } from "next/image";
+import Image, { getImageProps } from "next/image";
 import { bride, groom } from "@/data/wedding";
 import { Ornament } from "./Ornament";
 import { Petals } from "./Petals";
@@ -26,6 +26,15 @@ export function Hero() {
         />
       </picture>
       <div className="sky-fade absolute inset-0" />
+      {/* Marigold and jasmine corner garlands; the right one is the left mirrored */}
+      {(["left-0", "right-0 -scale-x-100"] as const).map((side) => (
+        <div
+          key={side}
+          className={`pointer-events-none absolute top-0 z-10 aspect-[825/889] w-[40vw] max-w-[300px] ${side}`}
+        >
+          <Image src="/images/corner-florals.webp" alt="" fill preload sizes="(min-width: 750px) 300px, 40vw" />
+        </div>
+      ))}
       <Petals />
 
       <div className="relative z-10 flex flex-col items-center px-6 pt-[12svh] text-center md:pt-[10svh]">

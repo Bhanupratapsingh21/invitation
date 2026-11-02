@@ -84,7 +84,7 @@ export const events: WeddingEvent[] = [
   },
   {
     id: "mataji-poojan",
-    image: "/images/pooja.webp",
+    image: "/images/mataji-pooja.webp",
     name: "Mataji Poojan",
     nameHi: "माताजी पूजन",
     tithi: "कार्तिक सुदी 7 सोमवार",

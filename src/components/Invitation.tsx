@@ -41,8 +41,8 @@ export function Invitation() {
     <section id="invitation" className="relative px-6 py-24">
       <div className="mx-auto max-w-3xl">
         <Reveal className="text-center">
-          <div className="relative mx-auto h-40 w-40 sm:h-48 sm:w-48">
-            <Image src="/images/ganesha.webp" alt="Lord Ganesha seated on a lotus" fill sizes="192px" />
+          <div className="relative mx-auto h-60 w-60 sm:h-72 sm:w-72">
+            <Image src="/images/ganesha.webp" alt="Lord Ganesha seated on a lotus" fill sizes="288px" />
           </div>
           <div lang="hi" className="mt-4 flex flex-wrap justify-center gap-x-6 gap-y-1 font-hindi text-sm text-gold">
             {invocations.top.map((line) => (

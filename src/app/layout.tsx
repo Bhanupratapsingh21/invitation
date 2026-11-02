@@ -21,17 +21,47 @@ const tiroDevanagari = Tiro_Devanagari_Hindi({
   weight: "400",
 });
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://wedding-invitation.bpss.in";
+const TITLE = "Neha & Pavan · Wedding Invitation";
+const DESCRIPTION =
+  "With the blessings of Shri Vinayak ji and Kuldevi Ashapura Maa, you are warmly invited to the wedding of Neha Kanwar and Kunwar Pavan Singh · 15–21 November 2026 · Kothariya, Nathdwara.";
+const OG_IMAGE = { url: "/og.jpg", width: 1200, height: 630, alt: "Neha & Pavan · 21 November 2026 · Kothariya, Nathdwara" };
+
 export const metadata: Metadata = {
-  // Set NEXT_PUBLIC_SITE_URL on the host so share previews resolve to the live domain.
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
+  metadataBase: new URL(SITE_URL),
   title: "Neha & Pavan · मंगल परिणयोत्सव",
-  description:
-    "You are warmly invited to the wedding of Neha Kanwar and Kunwar Pavan Singh, 15–21 November 2026, Kothariya, Nathdwara.",
+  description: DESCRIPTION,
+  applicationName: "Neha & Pavan",
+  authors: [{ name: "bpss", url: "https://bpss.in" }],
+  creator: "bpss.in",
+  keywords: [
+    "Neha weds Pavan",
+    "Neha Kanwar",
+    "Pavan Singh Shekhawat",
+    "wedding invitation",
+    "शुभ विवाह",
+    "Kothariya",
+    "Nathdwara",
+    "Rajasthan wedding",
+  ],
+  alternates: { canonical: "/" },
   openGraph: {
-    title: "Neha & Pavan · Wedding Invitation",
+    type: "website",
+    url: "/",
+    siteName: "Neha & Pavan",
+    locale: "en_IN",
+    title: TITLE,
     description: "15–21 November 2026 · Kothariya, Nathdwara",
-    images: [{ url: "/og.jpg", width: 1200, height: 630, alt: "Neha & Pavan · 21 November 2026" }],
+    images: [OG_IMAGE],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: "15–21 November 2026 · Kothariya, Nathdwara",
+    images: [OG_IMAGE],
+  },
+  appleWebApp: { title: "Neha & Pavan", statusBarStyle: "default" },
+  formatDetection: { telephone: false },
 };
 
 export const viewport: Viewport = {
