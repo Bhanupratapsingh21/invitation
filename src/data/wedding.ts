@@ -64,9 +64,10 @@ export const groom = {
 
 // Every ceremony is at the family home unless an event names its own venue.
 export const homeVenue = {
-  name: "Chauhan Residence, Kothariya, Nathdwara",
-  nameHi: "निवास स्थान, कोठारिया, नाथद्वारा",
-  short: "At home · Kothariya",
+  name: "Rajmahal, Kothariya, Nathdwara",
+  nameHi: "निवास स्थान (राजमहल), कोठारिया, नाथद्वारा",
+  short: "Rajmahal · Kothariya",
+  mapUrl: "https://maps.app.goo.gl/SoJ6ENs2Gz2JLivD8",
 };
 
 export const weddingDate ="2026-11-21T09:00:00+05:30"; // Panigrahan Sanskar
@@ -143,6 +144,17 @@ export const events: WeddingEvent[] = [
     timeHi: "सायं 6 बजे से आपके आगमन तक",
     venue: "Terapanth Bhawan, Kothariya",
     venueHi: "तेरापंथ भवन, कोठारिया",
+  },
+  {
+    // Not on the printed card; added by the family.
+    id: "mahila-sangeet",
+    image: "/images/mahila-sangeet.webp",
+    name: "Mahila Sangeet",
+    nameHi: "महिला संगीत",
+    tithi: "कार्तिक सुदी 10 शुक्रवार",
+    date: "2026-11-20T20:30:00+05:30",
+    time: "8:30 PM",
+    timeHi: "रात्रि 8.30 बजे",
   },
   {
     id: "panigrahan",

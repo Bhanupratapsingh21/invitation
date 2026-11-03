@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { events, homeVenue } from "@/data/wedding";
 import { formatEventDate } from "@/lib/format";
-import { SectionHeading } from "./Ornament";
+import { PinIcon, SectionHeading } from "./Ornament";
 import { Reveal } from "./Reveal";
 
 export function Events() {
@@ -17,9 +17,9 @@ export function Events() {
       <div className="relative mx-auto max-w-5xl">
         <SectionHeading eyebrow="15 – 21 November 2026" titleHi="संस्कार बेलाएं" title="Wedding Ceremonies" />
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {events.map((event, i) => (
-            <Reveal key={event.id} delay={(i % 4) * 100}>
+            <Reveal key={event.id} delay={(i % 3) * 100}>
               {/* Compact row on phones, arched card from sm up */}
               <article className="flex h-full items-center gap-4 rounded-2xl border border-gold/40 bg-ivory/85 p-4 sm:flex-col sm:gap-0 sm:rounded-b-2xl sm:rounded-t-[999px] sm:px-5 sm:pb-6 sm:pt-8 sm:text-center">
                 <div className="relative h-24 w-24 shrink-0 sm:h-32 sm:w-32">
@@ -37,9 +37,22 @@ export function Events() {
                   <p className="text-ink sm:mt-1 sm:text-lg">
                     {formatEventDate(event.date)} · {event.time}
                   </p>
-                  <p className="pt-2 text-[11px] uppercase tracking-[0.2em] text-ink/60 sm:mt-auto sm:pt-4">
-                    {event.venue ?? homeVenue.short}
-                  </p>
+                  {/* Only the home venue has a map pin; Terapanth Bhawan is shown as text */}
+                  {event.venue ? (
+                    <p className="pt-2 text-[11px] uppercase tracking-[0.2em] text-ink/60 sm:mt-auto sm:pt-4">
+                      {event.venue}
+                    </p>
+                  ) : (
+                    <a
+                      href={homeVenue.mapUrl}
+                      target="_blank"
+                      rel="noopener"
+                      className="inline-flex items-center gap-1 pt-2 text-[11px] uppercase tracking-[0.2em] text-saffron/90 underline decoration-gold/40 underline-offset-4 sm:mt-auto sm:pt-4"
+                    >
+                      <PinIcon />
+                      {homeVenue.short}
+                    </a>
+                  )}
                 </div>
               </article>
             </Reveal>

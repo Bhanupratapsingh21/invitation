@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { baraatNote, events, families, homeVenue } from "@/data/wedding";
-import { Ornament, SectionHeading } from "./Ornament";
+import { Ornament, PinIcon, SectionHeading } from "./Ornament";
 import { Reveal } from "./Reveal";
 
 const preetibhoj = events.find((e) => e.id === "preetibhoj");
@@ -40,6 +40,15 @@ export function Venue() {
         </p>
         <p className="mt-1 text-xl text-ink">{homeVenue.name}</p>
         <p className="mt-2 text-lg italic text-ink/65">The ceremonies are held at the family home.</p>
+        <a
+          href={homeVenue.mapUrl}
+          target="_blank"
+          rel="noopener"
+          className="mt-5 inline-flex items-center gap-2 rounded-full border border-saffron/60 bg-ivory px-6 py-2.5 text-sm uppercase tracking-[0.25em] text-saffron transition-colors hover:bg-saffron hover:text-ivory"
+        >
+          <PinIcon className="h-4 w-4" />
+          Get directions
+        </a>
         {preetibhoj?.venue && (
           <p className="mt-6 text-lg text-ink/80">
             <span lang="hi" className="font-hindi text-saffron">
