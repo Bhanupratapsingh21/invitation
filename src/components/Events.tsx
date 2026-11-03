@@ -37,22 +37,16 @@ export function Events() {
                   <p className="text-ink sm:mt-1 sm:text-lg">
                     {formatEventDate(event.date)} · {event.time}
                   </p>
-                  {/* Only the home venue has a map pin; Terapanth Bhawan is shown as text */}
-                  {event.venue ? (
-                    <p className="pt-2 text-[11px] uppercase tracking-[0.2em] text-ink/60 sm:mt-auto sm:pt-4">
-                      {event.venue}
-                    </p>
-                  ) : (
-                    <a
-                      href={homeVenue.mapUrl}
-                      target="_blank"
-                      rel="noopener"
-                      className="inline-flex items-center gap-1 pt-2 text-[11px] uppercase tracking-[0.2em] text-saffron/90 underline decoration-gold/40 underline-offset-4 sm:mt-auto sm:pt-4"
-                    >
-                      <PinIcon />
-                      {homeVenue.short}
-                    </a>
-                  )}
+                  {/* Events without their own venue are at the family home */}
+                  <a
+                    href={event.venueMapUrl ?? homeVenue.mapUrl}
+                    target="_blank"
+                    rel="noopener"
+                    className="inline-flex items-center gap-1 pt-2 text-[11px] uppercase tracking-[0.2em] text-saffron/90 underline decoration-gold/40 underline-offset-4 sm:mt-auto sm:pt-4"
+                  >
+                    <PinIcon />
+                    {event.venue ?? homeVenue.short}
+                  </a>
                 </div>
               </article>
             </Reveal>

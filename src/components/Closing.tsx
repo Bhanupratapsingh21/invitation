@@ -54,7 +54,16 @@ export function Venue() {
             <span lang="hi" className="font-hindi text-saffron">
               {preetibhoj.nameHi}
             </span>{" "}
-            · {preetibhoj.venue}
+            ·{" "}
+            <a
+              href={preetibhoj.venueMapUrl}
+              target="_blank"
+              rel="noopener"
+              className="inline-flex items-center gap-1 text-saffron underline decoration-gold/50 underline-offset-4 hover:decoration-saffron"
+            >
+              <PinIcon className="h-4 w-4" />
+              {preetibhoj.venue}
+            </a>
           </p>
         )}
       </Reveal>

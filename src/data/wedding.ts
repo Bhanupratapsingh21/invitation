@@ -11,6 +11,7 @@ export type WeddingEvent = {
   timeHi: string;
   venue?: string;
   venueHi?: string;
+  venueMapUrl?: string;
   image: string; // illustration in /public/images
 };
 
@@ -145,6 +146,7 @@ export const events: WeddingEvent[] = [
     timeHi: "सायं 6 बजे से आपके आगमन तक",
     venue: "Terapanth Bhawan, Kothariya",
     venueHi: "तेरापंथ भवन, कोठारिया",
+    venueMapUrl: "https://maps.app.goo.gl/6KuA18hn4vmC9s8v9",
   },
   {
     // Not on the printed card; added by the family.
