@@ -25,7 +25,8 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://wedding-invitation
 const TITLE = "Neha & Pawan · Wedding Invitation";
 const DESCRIPTION =
   "With the blessings of Shri Vinayak ji and Kuldevi Ashapura Maa, you are warmly invited to the wedding of Neha Kanwar and Kunwar Pawan Singh · 15–21 November 2026 · Kothariya, Nathdwara.";
-const OG_IMAGE = { url: "/og.jpg", width: 1200, height: 630, alt: "Neha & Pawan · 21 November 2026 · Kothariya, Nathdwara" };
+// Renamed whenever the image changes, so WhatsApp fetches it again instead of using its cache.
+const OG_IMAGE = { url: "/og-pawan.jpg", type: "image/jpeg", width: 1200, height: 630, alt: "Neha & Pawan · 21 November 2026 · Kothariya, Nathdwara" };
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
