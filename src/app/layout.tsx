@@ -22,22 +22,22 @@ const tiroDevanagari = Tiro_Devanagari_Hindi({
 });
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://wedding-invitation.bpss.in";
-const TITLE = "Neha & Pavan · Wedding Invitation";
+const TITLE = "Neha & Pawan · Wedding Invitation";
 const DESCRIPTION =
-  "With the blessings of Shri Vinayak ji and Kuldevi Ashapura Maa, you are warmly invited to the wedding of Neha Kanwar and Kunwar Pavan Singh · 15–21 November 2026 · Kothariya, Nathdwara.";
-const OG_IMAGE = { url: "/og.jpg", width: 1200, height: 630, alt: "Neha & Pavan · 21 November 2026 · Kothariya, Nathdwara" };
+  "With the blessings of Shri Vinayak ji and Kuldevi Ashapura Maa, you are warmly invited to the wedding of Neha Kanwar and Kunwar Pawan Singh · 15–21 November 2026 · Kothariya, Nathdwara.";
+const OG_IMAGE = { url: "/og.jpg", width: 1200, height: 630, alt: "Neha & Pawan · 21 November 2026 · Kothariya, Nathdwara" };
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Neha & Pavan · मंगल परिणयोत्सव",
+  title: "Neha & Pawan · मंगल परिणयोत्सव",
   description: DESCRIPTION,
-  applicationName: "Neha & Pavan",
+  applicationName: "Neha & Pawan",
   authors: [{ name: "bpss", url: "https://bpss.in" }],
   creator: "bpss.in",
   keywords: [
-    "Neha weds Pavan",
+    "Neha weds Pawan",
     "Neha Kanwar",
-    "Pavan Singh Shekhawat",
+    "Pawan Singh Shekhawat",
     "wedding invitation",
     "शुभ विवाह",
     "Kothariya",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "/",
-    siteName: "Neha & Pavan",
+    siteName: "Neha & Pawan",
     locale: "en_IN",
     title: TITLE,
     description: "15–21 November 2026 · Kothariya, Nathdwara",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     description: "15–21 November 2026 · Kothariya, Nathdwara",
     images: [OG_IMAGE],
   },
-  appleWebApp: { title: "Neha & Pavan", statusBarStyle: "default" },
+  appleWebApp: { title: "Neha & Pawan", statusBarStyle: "default" },
   formatDetection: { telephone: false },
 };
 

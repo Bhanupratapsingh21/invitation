@@ -53,7 +53,7 @@ export const bride = {
 };
 
 export const groom = {
-  name: "Pavan Singh",
+  name: "Pawan Singh",
   nameHi: "आयुष्मान कुं. पवन सिंह",
   grandsonOfHi: "स्व. श्रीमती एवं स्व. ठा.सा. श्री प्रेमसिंह जी शेखावत",
   sonOfHi: "श्रीमती एवं ठा.सा. श्री प्रतापसिंह जी शेखावत",
