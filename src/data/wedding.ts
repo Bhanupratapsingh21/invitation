@@ -65,10 +65,9 @@ export const groom = {
 
 // Every ceremony is at the family home unless an event names its own venue.
 export const homeVenue = {
-  // The home is near Kothariya's Rajmahal, not the Rajmahal itself.
-  name: "Family home, near Rajmahal, Kothariya, Nathdwara",
-  nameHi: "निवास स्थान, राजमहल के पास, कोठारिया, नाथद्वारा",
-  short: "Near Rajmahal · Kothariya",
+  name: "Family home, Old Girls School, near Satyanarayan Mandir, Kothariya, Nathdwara",
+  nameHi: "निवास स्थान, पुरानी गर्ल्स स्कूल, सत्यनारायण मंदिर के पास, कोठारिया, नाथद्वारा",
+  short: "Near Satyanarayan Mandir · Kothariya",
   mapUrl: "https://maps.app.goo.gl/SoJ6ENs2Gz2JLivD8",
 };
 
