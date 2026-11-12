@@ -37,7 +37,7 @@ export function Events() {
                   <p className="text-ink sm:mt-1 sm:text-lg">
                     {formatEventDate(event.date)} · {event.time}
                   </p>
-                  {/* Events without their own venue are at the family home */}
+                  {/* Events without their own venue are at the main venue */}
                   <a
                     href={event.venueMapUrl ?? homeVenue.mapUrl}
                     target="_blank"

@@ -1,9 +1,7 @@
 import Image from "next/image";
-import { baraatNote, events, families, homeVenue } from "@/data/wedding";
+import { baraatNote, families, homeVenue } from "@/data/wedding";
 import { Ornament, PinIcon, SectionHeading } from "./Ornament";
 import { Reveal } from "./Reveal";
-
-const preetibhoj = events.find((e) => e.id === "preetibhoj");
 
 export function Baraat() {
   return (
@@ -39,7 +37,7 @@ export function Venue() {
           {homeVenue.nameHi}
         </p>
         <p className="mt-1 text-xl text-ink">{homeVenue.name}</p>
-        <p className="mt-2 text-lg italic text-ink/65">The ceremonies are held at the family home.</p>
+        <p className="mt-2 text-lg italic text-ink/65">All ceremonies and the Preetibhoj are held here.</p>
         <a
           href={homeVenue.mapUrl}
           target="_blank"
@@ -49,23 +47,6 @@ export function Venue() {
           <PinIcon className="h-4 w-4" />
           Get directions
         </a>
-        {preetibhoj?.venue && (
-          <p className="mt-6 text-lg text-ink/80">
-            <span lang="hi" className="font-hindi text-saffron">
-              {preetibhoj.nameHi}
-            </span>{" "}
-            ·{" "}
-            <a
-              href={preetibhoj.venueMapUrl}
-              target="_blank"
-              rel="noopener"
-              className="inline-flex items-center gap-1 text-saffron underline decoration-gold/50 underline-offset-4 hover:decoration-saffron"
-            >
-              <PinIcon className="h-4 w-4" />
-              {preetibhoj.venue}
-            </a>
-          </p>
-        )}
       </Reveal>
       {/* Scene sits below the text; its sky fades into the page */}
       <div className="relative -mt-8 aspect-[3/2] w-full md:-mt-24 md:aspect-[16/7]">

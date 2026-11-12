@@ -63,10 +63,10 @@ export const groom = {
   place: "Manji ki Dhani, Ghatwa (Didwana)",
 };
 
-// Every ceremony is at the family home unless an event names its own venue.
+// Every ceremony, the Preetibhoj included, is here unless an event names its own venue.
 export const homeVenue = {
-  name: "Family home, Old Girls School, near Satyanarayan Mandir, Kothariya, Nathdwara",
-  nameHi: "निवास स्थान, पुरानी गर्ल्स स्कूल, सत्यनारायण मंदिर के पास, कोठारिया, नाथद्वारा",
+  name: "Old Girls School, near Satyanarayan Mandir, Kothariya, Nathdwara",
+  nameHi: "पुरानी गर्ल्स स्कूल, सत्यनारायण मंदिर के पास, कोठारिया, नाथद्वारा",
   short: "Near Satyanarayan Mandir · Kothariya",
   mapUrl: "https://maps.app.goo.gl/SoJ6ENs2Gz2JLivD8",
 };
@@ -125,16 +125,6 @@ export const events: WeddingEvent[] = [
     timeHi: "दोपहर 12.30 एवं 2.15 बजे",
   },
   {
-    id: "mayra",
-    image: "/images/mayra.webp",
-    name: "Mayra",
-    nameHi: "मायरा",
-    tithi: "कार्तिक सुदी 10 शुक्रवार",
-    date: "2026-11-20T16:15:00+05:30",
-    time: "4:15 PM",
-    timeHi: "दोपहर 4.15 बजे",
-  },
-  {
     id: "preetibhoj",
     image: "/images/preetibhoj.webp",
     name: "Preetibhoj",
@@ -143,9 +133,6 @@ export const events: WeddingEvent[] = [
     date: "2026-11-20T18:00:00+05:30",
     time: "6 PM onwards",
     timeHi: "सायं 6 बजे से आपके आगमन तक",
-    venue: "Terapanth Bhawan, Kothariya",
-    venueHi: "तेरापंथ भवन, कोठारिया",
-    venueMapUrl: "https://maps.app.goo.gl/6KuA18hn4vmC9s8v9",
   },
   {
     // Not on the printed card; added by the family.
